@@ -6,15 +6,15 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai'],
     // 测试页面需要加载的资源
     files: [
-      'index.html',
-      'index.test.js',
+      'add.js',
+      'add.test.js',
     ],
     // 配置预处理器，在上面files载入对应的文件前，如果在这里配置了预处理器，会先对文件做处理，然后载入处理结果。
     preprocessors: {
-      'index.html' : ['html2js'],
+      'add.js': ['coverage'],
     },
     // 安装的插件列表
-    plugins: ['karma-mocha', 'karma-chai', 'karma-phantomjs-launcher', 'karma-coverage', 'karma-spec-reporter', 'karma-html2js-preprocessor'],
+    plugins: ['karma-mocha', 'karma-chai', 'karma-phantomjs-launcher', 'karma-coverage', 'karma-spec-reporter'],
     // 需要测试的浏览器
     browsers: ['PhantomJS'],
     // 需要生成哪些代码报告
